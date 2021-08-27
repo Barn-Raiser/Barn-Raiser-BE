@@ -4,6 +4,7 @@ version: 2.1 # Use 2.1 to enable using orbs and other features.
 # read more about orbs: https://circleci.com/docs/2.0/using-orbs/
 orbs:
   ruby: circleci/ruby@1.0
+  heroku: circleci/heroku@0.0.10.
 
 jobs:
   build: # our first job, named "build"
@@ -60,6 +61,15 @@ workflows:
       - test:         # Then run test,
           requires:   # Test requires that build passes for it to run.
             - build   # Finally, run the build job.
+  heroku_deploy:
+    jobs:
+      - build
+      - heroku/deploy-via-git:
+        requires:
+          - build
+        filters:
+          branches:
+            only: sequential-branch-filter
 
 
 
@@ -67,7 +77,7 @@ workflows:
 
 
 
-#andrew's version
+#andrew's former version
 # version: 2.1
 # orbs:
 #   ruby: circleci/ruby@0.1.2
