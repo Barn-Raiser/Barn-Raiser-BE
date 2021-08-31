@@ -46,40 +46,46 @@ RSpec.describe 'Create a new need', type: :request do
       expect(Need.last.street_address).to eq(nil)
     end
 
-    xit 'sets status to active in create' do
-      post '/graphql', params: @body, as: :json
+    it 'sets status to active in create' do
+      post '/graphql', params: {query: @query}
 
       expect(Need.last.status).to eq('active')
     end
-
   end
 
-  xdescribe 'sad path' do
-    it 'returns an error if required data is missing' do
-      incomplete_body = "mutation {
-                createNeed(input:
-                  	     {
-                 	          title: `Cleanup our park`
-                            description: `I've noticed a lot of litter in the park lately. I'd like to do a cleanup day with the community.`
-                            startTime: `2021-08-31 11:00:00 -600`
-                            city: `Denver`
-                            state: `Colorado`
-                            zipCode: `80218`
-                            supportersNeeded: 15
-                          }
-                          )
-                {
+  describe 'sad path' do
+    before :each do
+      @incomplete_query =
+              <<~GQL
+                mutation {
+                  createNeed(input:
+                    {
+                    title: "Cleanup our park"
+                    description: "I've noticed a lot of litter in the park lately. I'd like to do a cleanup day with the community."
+                    startTime: "2021-08-31 11:00:00 -600"
+                    city: "Denver"
+                    state: "Colorado"
+                    zipCode: "80218"
+                    supportersNeeded: 15
+                  }
+                  )
+                  {
                   need {
-                        id
-                      }
+                    id
+                    title
+                  }
                   errors
-              	}
-              }"
+                }
+                }
+              GQL
+    end
 
-      post '/graphql', params: @body, as: :json
+    it 'returns an error if required data is missing' do
+      post '/graphql', params: {query: @incomplete_query}
       output = JSON.parse(response.body, symbolize_names: true)
 
-      expect(output[:errors].first).to eq("point_of_contact cannot be blank")
+      expect(output[:errors].first[:message]).to eq("Argument 'pointOfContact' on InputObject 'CreateNeedInput' is required. Expected type String!")
+      expect(output[:errors].second[:message]).to eq("Argument 'endTime' on InputObject 'CreateNeedInput' is required. Expected type String!")
     end
   end
 end
