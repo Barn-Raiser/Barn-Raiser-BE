@@ -35,7 +35,6 @@ class Mutations::CreateNeed < Mutations::BaseMutation
       }
     else
       {
-        need: nil,
         errors: need.errors.full_messages
       }
     end

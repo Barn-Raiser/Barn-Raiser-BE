@@ -84,6 +84,7 @@ RSpec.describe 'Create a new need', type: :request do
       post '/graphql', params: {query: @incomplete_query}
       output = JSON.parse(response.body, symbolize_names: true)
 
+      expect(output[:need]).to eq(nil)
       expect(output[:errors].first[:message]).to eq("Argument 'pointOfContact' on InputObject 'CreateNeedInput' is required. Expected type String!")
       expect(output[:errors].second[:message]).to eq("Argument 'endTime' on InputObject 'CreateNeedInput' is required. Expected type String!")
     end
