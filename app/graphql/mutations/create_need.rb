@@ -13,7 +13,7 @@ class Mutations::CreateNeed < Mutations::BaseMutation
   field :need, Types::NeedType, null: true
   field :errors, [String], null: false
 
-  def resolve(title:, point_of_contact:, description:, start_time:, end_time:, street_address:, city:, state:, zip_code:, supporters_needed:)
+  def resolve(title:, point_of_contact:, description:, start_time:, end_time:, street_address: nil, city: nil, state: nil, zip_code:, supporters_needed:)
     need = Need.new(
             title: title,
             point_of_contact: point_of_contact,
