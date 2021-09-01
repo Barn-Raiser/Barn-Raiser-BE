@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-08-31T11:57:08-06:00">2021-08-31T11:57:08-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-08-31T16:04:29-06:00">2021-08-31T16:04:29-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,7 +23,7 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  91.58%
+  92.51%
 </span>
 
      </span>
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>202</b> relevant lines,
-    <span class="green"><b>185</b> lines covered</span> and
+    <b>227</b> relevant lines,
+    <span class="green"><b>210</b> lines covered</span> and
     <span class="red"><b>17</b> lines missed. </span>
     (<span class="green">
-  91.58%
+  92.51%
 </span>
 )
   </div>
@@ -220,7 +220,7 @@
             <td class="cell--number">12</td>
             <td class="cell--number">11</td>
             <td class="cell--number">1</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">1.08</td>
             
           </tr>
         
@@ -249,9 +249,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#cd22116069450edb2a85352398d2d627326ed09c" class="src_link" title="spec/requests/get_needs_spec.rb">spec/requests/get_needs_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">223</td>
-            <td class="cell--number">89</td>
-            <td class="cell--number">89</td>
+            <td class="cell--number">237</td>
+            <td class="cell--number">114</td>
+            <td class="cell--number">114</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -2937,8 +2937,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="14">
+            <span class="hits">2</span>
             
 
             
@@ -3303,8 +3303,8 @@
     
 
     <div class="t-line-summary">
-      <b>89</b> relevant lines.
-      <span class="green"><b>89</b> lines covered</span> and
+      <b>114</b> relevant lines.
+      <span class="green"><b>114</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3806,95 +3806,95 @@
 
             
 
-            <code class="ruby">      end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="46">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="47">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="48">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="46">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    # describe &#39;allActiveNeeds&#39; do</code>
+            
+
+            <code class="ruby">        expect(needs[:data][:allNeeds].last[:title]).to eq(&quot;need 3&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="49">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="47">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    #   it &#39;can return all information&#39; do</code>
+            
+
+            <code class="ruby">        expect(needs[:data][:allNeeds].last[:description]).to eq(&quot;the theird test&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="50">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="48">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    #     need_1 = Need.create(title: &quot;need_1&quot;, description: &quot;first&quot;, point_of_contact: &quot;email@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 12, status: &quot;active&quot;)</code>
+            
+
+            <code class="ruby">        expect(needs[:data][:allNeeds].last[:pointOfContact]).to eq(&quot;test@gmail.com&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="51">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="49">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    #     need_2 = Need.create(title: &quot;need 2&quot;, description: &quot;the second test&quot;, point_of_contact: &quot;email@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 4, status: &quot;rejected&quot;)</code>
+            
+
+            <code class="ruby">        expect(needs[:data][:allNeeds].last[:startTime]).to eq(&quot;string value&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="52">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="50">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    #     need_3 = Need.create(title: &quot;need 3&quot;, description: &quot;the theird test&quot;, point_of_contact: &quot;test@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;54321&quot;, supporters_needed: 1, status: &quot;active&quot;)</code>
+            
+
+            <code class="ruby">        expect(needs[:data][:allNeeds].last[:endTime]).to eq(&quot;string value&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="53">
+          <li class="covered" data-hits="1" data-linenumber="51">
+            <span class="hits">1</span>
             
+
+            
+
+            <code class="ruby">        expect(needs[:data][:allNeeds].last[:zipCode]).to eq(&quot;12345&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="52">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    #     need_4 = Need.create(title: &quot;need 4&quot;, description: &quot;the fourth test&quot;, point_of_contact: &quot;email@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;24680&quot;, supporters_needed: 3, status: &quot;active&quot;)</code>
+            <code class="ruby">        expect(needs[:data][:allNeeds].last[:supportersNeeded]).to eq(1)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="53">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:allNeeds].last[:status]).to eq(&quot;active&quot;)</code>
           </li>
         </div>
       
@@ -3905,7 +3905,7 @@
 
             
 
-            <code class="ruby">    #     need_5 = Need.create(title: &quot;need 5&quot;, description: &quot;the fifth test&quot;, point_of_contact: &quot;asdf@adsf.asdf&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;54321&quot;, supporters_needed: 5, status: &quot;rejected&quot;)</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -3916,51 +3916,51 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="56">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="56">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    #     query = &lt;&lt;~GQL</code>
+            
+
+            <code class="ruby">      it &#39;can return limited information if requested&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="57">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="57">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    #             { allActiveNeeds</code>
+            
+
+            <code class="ruby">        need_1 = Need.create(title: &quot;a need&quot;, description: &quot;a test to see if we can test&quot;, point_of_contact: &quot;email@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 12, status: &quot;active&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="58">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="58">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    #               {</code>
+            
+
+            <code class="ruby">        need_2 = Need.create(title: &quot;need 2&quot;, description: &quot;the second test&quot;, point_of_contact: &quot;email@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 4, status: &quot;active&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="59">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="59">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    #                 title</code>
+            
+
+            <code class="ruby">        need_3 = Need.create(title: &quot;need 3&quot;, description: &quot;the theird test&quot;, point_of_contact: &quot;test@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 1, status: &quot;active&quot;)</code>
           </li>
         </div>
       
@@ -3971,18 +3971,18 @@
 
             
 
-            <code class="ruby">    #                 description</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="61">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="61">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    #                 pointOfContact</code>
+            
+
+            <code class="ruby">        query = &lt;&lt;~GQL</code>
           </li>
         </div>
       
@@ -3993,7 +3993,7 @@
 
             
 
-            <code class="ruby">    #                 startTime</code>
+            <code class="ruby">                { allNeeds</code>
           </li>
         </div>
       
@@ -4004,7 +4004,7 @@
 
             
 
-            <code class="ruby">    #                 endTime</code>
+            <code class="ruby">                  {</code>
           </li>
         </div>
       
@@ -4015,7 +4015,7 @@
 
             
 
-            <code class="ruby">    #                 zipCode</code>
+            <code class="ruby">                    title</code>
           </li>
         </div>
       
@@ -4026,7 +4026,7 @@
 
             
 
-            <code class="ruby">    #                 supportersNeeded</code>
+            <code class="ruby">                    pointOfContact</code>
           </li>
         </div>
       
@@ -4037,7 +4037,7 @@
 
             
 
-            <code class="ruby">    #                 status</code>
+            <code class="ruby">                  }</code>
           </li>
         </div>
       
@@ -4048,7 +4048,7 @@
 
             
 
-            <code class="ruby">    #               }</code>
+            <code class="ruby">                }</code>
           </li>
         </div>
       
@@ -4059,7 +4059,7 @@
 
             
 
-            <code class="ruby">    #             }</code>
+            <code class="ruby">                GQL</code>
           </li>
         </div>
       
@@ -4070,518 +4070,12 @@
 
             
 
-            <code class="ruby">    #             GQL</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="70">
-            
-            
-
-            
-
-            <code class="ruby">    #</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="71">
-            
-            
-
-            
-
-            <code class="ruby">    #     post &#39;/graphql&#39;, params: {query: query}</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="72">
-            
-            
-
-            
-
-            <code class="ruby">    #</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="73">
-            
-            
-
-            
-
-            <code class="ruby">    #     needs = JSON.parse(response.body, symbolize_names: true)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="74">
-            
-            
-
-            
-
-            <code class="ruby">    #</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="75">
-            
-            
-
-            
-
-            <code class="ruby">    #     expect(response).to be_successful</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="76">
-            
-            
-
-            
-
-            <code class="ruby">    #     expect(response.status).to eq(200)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="77">
-            
-            
-
-            
-
-            <code class="ruby">    #     expect(response.content_type).to eq(&quot;application/json&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="78">
-            
-            
-
-            
-
-            <code class="ruby">    #</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="79">
-            
-            
-
-            
-
-            <code class="ruby">    #     expect(needs[:data][:allActiveNeeds]).to be_a(Array)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="80">
-            
-            
-
-            
-
-            <code class="ruby">    #     expect(needs[:data][:allActiveNeeds].count).to eq(3)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="81">
-            
-            
-
-            
-
-            <code class="ruby">    #</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="82">
-            
-            
-
-            
-
-            <code class="ruby">    #     expect(needs[:data][:allActiveNeeds].first[:title]).to eq(&quot;need_1&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="83">
-            
-            
-
-            
-
-            <code class="ruby">    #     expect(needs[:data][:allActiveNeeds].first[:description]).to eq(&quot;a test to see if we can test&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="84">
-            
-            
-
-            
-
-            <code class="ruby">    #     expect(needs[:data][:allActiveNeeds].first[:pointOfContact]).to eq(&quot;email@gmail.com&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="85">
-            
-            
-
-            
-
-            <code class="ruby">    #     expect(needs[:data][:allActiveNeeds].first[:startTime]).to eq(&quot;string value&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="86">
-            
-            
-
-            
-
-            <code class="ruby">    #     expect(needs[:data][:allActiveNeeds].first[:endTime]).to eq(&quot;string value&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="87">
-            
-            
-
-            
-
-            <code class="ruby">    #     expect(needs[:data][:allActiveNeeds].first[:zipCode]).to eq(&quot;12345&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="88">
-            
-            
-
-            
-
-            <code class="ruby">    #     expect(needs[:data][:allActiveNeeds].first[:supportersNeeded]).to eq(12)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="89">
-            
-            
-
-            
-
-            <code class="ruby">    #     expect(needs[:data][:allActiveNeeds].first[:status]).to eq(&quot;active&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="90">
-            
-            
-
-            
-
-            <code class="ruby">    #   end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="91">
-            
-            
-
-            
-
-            <code class="ruby">    # end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="92">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="93">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="94">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  describe &#39;find one need&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="95">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    describe &#39;need(id:)&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="96">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      it &#39; can returns all possible data&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="97">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        need_2 = Need.create(title: &quot;need 2&quot;, description: &quot;the second test&quot;, point_of_contact: &quot;email@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 4, status: &quot;active&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="98">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        need_1 = Need.create(title: &quot;a need&quot;, description: &quot;a test to see if we can test&quot;, point_of_contact: &quot;email@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 12, status: &quot;active&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="99">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        need_3 = Need.create(title: &quot;need 3&quot;, description: &quot;the theird test&quot;, point_of_contact: &quot;test@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 1, status: &quot;active&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="100">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="101">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        query = &lt;&lt;~GQL</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="102">
-            
-            
-
-            
-
-            <code class="ruby">                  { need(id:#{need_1.id})</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="103">
-            
-            
-
-            
-
-            <code class="ruby">                    {</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="104">
-            
-            
-
-            
-
-            <code class="ruby">                      title</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="105">
-            
-            
-
-            
-
-            <code class="ruby">                      description</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="106">
-            
-            
-
-            
-
-            <code class="ruby">                      pointOfContact</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="107">
-            
-            
-
-            
-
-            <code class="ruby">                      startTime</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="108">
-            
-            
-
-            
-
-            <code class="ruby">                      endTime</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="109">
-            
-            
-
-            
-
-            <code class="ruby">                      zipCode</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="110">
-            
-            
-
-            
-
-            <code class="ruby">                      supportersNeeded</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="111">
-            
-            
-
-            
-
-            <code class="ruby">                      status</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="112">
-            
-            
-
-            
-
-            <code class="ruby">                    }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="113">
-            
-            
-
-            
-
-            <code class="ruby">                  }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="114">
-            
-            
-
-            
-
-            <code class="ruby">                  GQL</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="115">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="116">
+          <li class="covered" data-hits="1" data-linenumber="70">
             <span class="hits">1</span>
             
 
@@ -4592,7 +4086,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="117">
+          <li class="never" data-hits="" data-linenumber="71">
             
             
 
@@ -4603,7 +4097,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="118">
+          <li class="covered" data-hits="1" data-linenumber="72">
             <span class="hits">1</span>
             
 
@@ -4614,7 +4108,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="119">
+          <li class="never" data-hits="" data-linenumber="73">
             
             
 
@@ -4625,7 +4119,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="120">
+          <li class="covered" data-hits="1" data-linenumber="74">
             <span class="hits">1</span>
             
 
@@ -4636,7 +4130,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="121">
+          <li class="covered" data-hits="1" data-linenumber="75">
             <span class="hits">1</span>
             
 
@@ -4647,7 +4141,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="122">
+          <li class="covered" data-hits="1" data-linenumber="76">
             <span class="hits">1</span>
             
 
@@ -4658,7 +4152,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="123">
+          <li class="never" data-hits="" data-linenumber="77">
             
             
 
@@ -4669,183 +4163,227 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="124">
+          <li class="covered" data-hits="1" data-linenumber="78">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        expect(needs[:data][:need]).to have_key(:title)</code>
+            <code class="ruby">        expect(needs[:data][:allNeeds]).to be_a(Array)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="125">
+          <li class="covered" data-hits="1" data-linenumber="79">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        expect(needs[:data][:need][:title]).to eq(&quot;a need&quot;)</code>
+            <code class="ruby">        expect(needs[:data][:allNeeds].count).to eq(3)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="126">
+          <li class="never" data-hits="" data-linenumber="80">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="81">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        expect(needs[:data][:need]).to have_key(:description)</code>
+            <code class="ruby">        expect(needs[:data][:allNeeds].first[:title]).to eq(&quot;a need&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="127">
+          <li class="covered" data-hits="1" data-linenumber="82">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        expect(needs[:data][:need][:description]).to eq(&quot;a test to see if we can test&quot;)</code>
+            <code class="ruby">        expect(needs[:data][:allNeeds].first[:description]).to_not eq(&quot;a test to see if we can test&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="128">
+          <li class="covered" data-hits="1" data-linenumber="83">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        expect(needs[:data][:need]).to have_key(:pointOfContact)</code>
+            <code class="ruby">        expect(needs[:data][:allNeeds].first[:pointOfContact]).to eq(&quot;email@gmail.com&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="129">
+          <li class="covered" data-hits="1" data-linenumber="84">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        expect(needs[:data][:need][:pointOfContact]).to eq(&quot;email@gmail.com&quot;)</code>
+            <code class="ruby">        expect(needs[:data][:allNeeds].first[:startTime]).to_not eq(&quot;string value&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="130">
+          <li class="covered" data-hits="1" data-linenumber="85">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        expect(needs[:data][:need]).to have_key(:startTime)</code>
+            <code class="ruby">        expect(needs[:data][:allNeeds].first[:endTime]).to_not eq(&quot;string value&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="131">
+          <li class="covered" data-hits="1" data-linenumber="86">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        expect(needs[:data][:need][:startTime]).to eq(&quot;string value&quot;)</code>
+            <code class="ruby">        expect(needs[:data][:allNeeds].first[:zipCode]).to_not eq(&quot;12345&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="132">
+          <li class="covered" data-hits="1" data-linenumber="87">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        expect(needs[:data][:need]).to have_key(:endTime)</code>
+            <code class="ruby">        expect(needs[:data][:allNeeds].first[:supportersNeeded]).to_not eq(12)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="133">
+          <li class="covered" data-hits="1" data-linenumber="88">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        expect(needs[:data][:need][:endTime]).to eq(&quot;string value&quot;)</code>
+            <code class="ruby">        expect(needs[:data][:allNeeds].first[:status]).to_not eq(&quot;active&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="134">
+          <li class="never" data-hits="" data-linenumber="89">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="90">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        expect(needs[:data][:need]).to have_key(:zipCode)</code>
+            <code class="ruby">        expect(needs[:data][:allNeeds].last[:title]).to eq(&quot;need 3&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="135">
+          <li class="covered" data-hits="1" data-linenumber="91">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        expect(needs[:data][:need][:zipCode]).to eq(&quot;12345&quot;)</code>
+            <code class="ruby">        expect(needs[:data][:allNeeds].last[:description]).to_not eq(&quot;the theird test&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="136">
+          <li class="covered" data-hits="1" data-linenumber="92">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        expect(needs[:data][:need]).to have_key(:supportersNeeded)</code>
+            <code class="ruby">        expect(needs[:data][:allNeeds].last[:pointOfContact]).to eq(&quot;test@gmail.com&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="137">
+          <li class="covered" data-hits="1" data-linenumber="93">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        expect(needs[:data][:need][:supportersNeeded]).to eq(12)</code>
+            <code class="ruby">        expect(needs[:data][:allNeeds].last[:startTime]).to_not eq(&quot;string value&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="138">
+          <li class="covered" data-hits="1" data-linenumber="94">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        expect(needs[:data][:need]).to have_key(:status)</code>
+            <code class="ruby">        expect(needs[:data][:allNeeds].last[:endTime]).to_not eq(&quot;string value&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="139">
+          <li class="covered" data-hits="1" data-linenumber="95">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        expect(needs[:data][:need][:status]).to eq(&quot;active&quot;)</code>
+            <code class="ruby">        expect(needs[:data][:allNeeds].last[:zipCode]).to_not eq(&quot;12345&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="140">
+          <li class="covered" data-hits="1" data-linenumber="96">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:allNeeds].last[:supportersNeeded]).to_not eq(1)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="97">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:allNeeds].last[:status]).to_not eq(&quot;active&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="98">
             
             
 
@@ -4856,7 +4394,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="141">
+          <li class="never" data-hits="" data-linenumber="99">
             
             
 
@@ -4867,46 +4405,508 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="142">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="100">
+            
             
 
             
 
-            <code class="ruby">      it &#39;can return only one requested piece of data &#39; do</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="143">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="101">
+            
             
 
             
 
-            <code class="ruby">        need_2 = Need.create(title: &quot;need 2&quot;, description: &quot;the second test&quot;, point_of_contact: &quot;email@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 4, status: &quot;active&quot;)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="144">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="102">
+            
             
 
             
 
-            <code class="ruby">        need_1 = Need.create(title: &quot;a need&quot;, description: &quot;a test to see if we can test&quot;, point_of_contact: &quot;email@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 12, status: &quot;active&quot;)</code>
+            <code class="ruby">    # describe &#39;allActiveNeeds&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="145">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="103">
+            
             
 
             
 
-            <code class="ruby">        need_3 = Need.create(title: &quot;need 3&quot;, description: &quot;the theird test&quot;, point_of_contact: &quot;test@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 1, status: &quot;active&quot;)</code>
+            <code class="ruby">    #   it &#39;can return all information&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="104">
+            
+            
+
+            
+
+            <code class="ruby">    #     need_1 = Need.create(title: &quot;need_1&quot;, description: &quot;first&quot;, point_of_contact: &quot;email@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 12, status: &quot;active&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="105">
+            
+            
+
+            
+
+            <code class="ruby">    #     need_2 = Need.create(title: &quot;need 2&quot;, description: &quot;the second test&quot;, point_of_contact: &quot;email@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 4, status: &quot;rejected&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="106">
+            
+            
+
+            
+
+            <code class="ruby">    #     need_3 = Need.create(title: &quot;need 3&quot;, description: &quot;the theird test&quot;, point_of_contact: &quot;test@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;54321&quot;, supporters_needed: 1, status: &quot;active&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="107">
+            
+            
+
+            
+
+            <code class="ruby">    #     need_4 = Need.create(title: &quot;need 4&quot;, description: &quot;the fourth test&quot;, point_of_contact: &quot;email@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;24680&quot;, supporters_needed: 3, status: &quot;active&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="108">
+            
+            
+
+            
+
+            <code class="ruby">    #     need_5 = Need.create(title: &quot;need 5&quot;, description: &quot;the fifth test&quot;, point_of_contact: &quot;asdf@adsf.asdf&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;54321&quot;, supporters_needed: 5, status: &quot;rejected&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="109">
+            
+            
+
+            
+
+            <code class="ruby">    #</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="110">
+            
+            
+
+            
+
+            <code class="ruby">    #     query = &lt;&lt;~GQL</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="111">
+            
+            
+
+            
+
+            <code class="ruby">    #             { allActiveNeeds</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="112">
+            
+            
+
+            
+
+            <code class="ruby">    #               {</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="113">
+            
+            
+
+            
+
+            <code class="ruby">    #                 title</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="114">
+            
+            
+
+            
+
+            <code class="ruby">    #                 description</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="115">
+            
+            
+
+            
+
+            <code class="ruby">    #                 pointOfContact</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="116">
+            
+            
+
+            
+
+            <code class="ruby">    #                 startTime</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="117">
+            
+            
+
+            
+
+            <code class="ruby">    #                 endTime</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="118">
+            
+            
+
+            
+
+            <code class="ruby">    #                 zipCode</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="119">
+            
+            
+
+            
+
+            <code class="ruby">    #                 supportersNeeded</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="120">
+            
+            
+
+            
+
+            <code class="ruby">    #                 status</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="121">
+            
+            
+
+            
+
+            <code class="ruby">    #               }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="122">
+            
+            
+
+            
+
+            <code class="ruby">    #             }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="123">
+            
+            
+
+            
+
+            <code class="ruby">    #             GQL</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="124">
+            
+            
+
+            
+
+            <code class="ruby">    #</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="125">
+            
+            
+
+            
+
+            <code class="ruby">    #     post &#39;/graphql&#39;, params: {query: query}</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="126">
+            
+            
+
+            
+
+            <code class="ruby">    #</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="127">
+            
+            
+
+            
+
+            <code class="ruby">    #     needs = JSON.parse(response.body, symbolize_names: true)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="128">
+            
+            
+
+            
+
+            <code class="ruby">    #</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="129">
+            
+            
+
+            
+
+            <code class="ruby">    #     expect(response).to be_successful</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="130">
+            
+            
+
+            
+
+            <code class="ruby">    #     expect(response.status).to eq(200)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="131">
+            
+            
+
+            
+
+            <code class="ruby">    #     expect(response.content_type).to eq(&quot;application/json&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="132">
+            
+            
+
+            
+
+            <code class="ruby">    #</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="133">
+            
+            
+
+            
+
+            <code class="ruby">    #     expect(needs[:data][:allActiveNeeds]).to be_a(Array)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="134">
+            
+            
+
+            
+
+            <code class="ruby">    #     expect(needs[:data][:allActiveNeeds].count).to eq(3)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="135">
+            
+            
+
+            
+
+            <code class="ruby">    #</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="136">
+            
+            
+
+            
+
+            <code class="ruby">    #     expect(needs[:data][:allActiveNeeds].first[:title]).to eq(&quot;need_1&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="137">
+            
+            
+
+            
+
+            <code class="ruby">    #     expect(needs[:data][:allActiveNeeds].first[:description]).to eq(&quot;a test to see if we can test&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="138">
+            
+            
+
+            
+
+            <code class="ruby">    #     expect(needs[:data][:allActiveNeeds].first[:pointOfContact]).to eq(&quot;email@gmail.com&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="139">
+            
+            
+
+            
+
+            <code class="ruby">    #     expect(needs[:data][:allActiveNeeds].first[:startTime]).to eq(&quot;string value&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="140">
+            
+            
+
+            
+
+            <code class="ruby">    #     expect(needs[:data][:allActiveNeeds].first[:endTime]).to eq(&quot;string value&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="141">
+            
+            
+
+            
+
+            <code class="ruby">    #     expect(needs[:data][:allActiveNeeds].first[:zipCode]).to eq(&quot;12345&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="142">
+            
+            
+
+            
+
+            <code class="ruby">    #     expect(needs[:data][:allActiveNeeds].first[:supportersNeeded]).to eq(12)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="143">
+            
+            
+
+            
+
+            <code class="ruby">    #     expect(needs[:data][:allActiveNeeds].first[:status]).to eq(&quot;active&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="144">
+            
+            
+
+            
+
+            <code class="ruby">    #   end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="145">
+            
+            
+
+            
+
+            <code class="ruby">    # end</code>
           </li>
         </div>
       
@@ -4917,84 +4917,84 @@
 
             
 
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="147">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="147">
+          <li class="covered" data-hits="1" data-linenumber="148">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        query = &lt;&lt;~GQL</code>
+            <code class="ruby">  describe &#39;find one need&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="148">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="149">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">                  { need(id:#{need_1.id})</code>
+            
+
+            <code class="ruby">    describe &#39;need(id:)&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="149">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="150">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">                    {</code>
+            
+
+            <code class="ruby">      it &#39; can returns all possible data&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="150">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="151">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">                      title</code>
+            
+
+            <code class="ruby">        need_2 = Need.create(title: &quot;need 2&quot;, description: &quot;the second test&quot;, point_of_contact: &quot;email@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 4, status: &quot;active&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="151">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="152">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">                    }</code>
+            
+
+            <code class="ruby">        need_1 = Need.create(title: &quot;a need&quot;, description: &quot;a test to see if we can test&quot;, point_of_contact: &quot;email@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 12, status: &quot;active&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="152">
-            
-            
-
-            
-
-            <code class="ruby">                  }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="153">
-            
+          <li class="covered" data-hits="1" data-linenumber="153">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">                  GQL</code>
+            <code class="ruby">        need_3 = Need.create(title: &quot;need 3&quot;, description: &quot;the theird test&quot;, point_of_contact: &quot;test@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 1, status: &quot;active&quot;)</code>
           </li>
         </div>
       
@@ -5016,7 +5016,7 @@
 
             
 
-            <code class="ruby">        post &#39;/graphql&#39;, params: {query: query}</code>
+            <code class="ruby">        query = &lt;&lt;~GQL</code>
           </li>
         </div>
       
@@ -5027,353 +5027,12 @@
 
             
 
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="157">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        needs = JSON.parse(response.body, symbolize_names: true)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="158">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="159">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(response).to be_successful</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="160">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(response.status).to eq(200)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="161">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(response.content_type).to eq(&quot;application/json&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="162">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="163">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(needs[:data][:need]).to have_key(:title)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="164">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(needs[:data][:need][:title]).to eq(&quot;a need&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="165">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(needs[:data][:need]).to_not have_key(:description)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="166">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(needs[:data][:need][:description]).to eq(nil)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="167">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(needs[:data][:need]).to_not have_key(:pointOfContact)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="168">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(needs[:data][:need][:pointOfContact]).to eq(nil)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="169">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(needs[:data][:need]).to_not have_key(:startTime)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="170">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(needs[:data][:need][:startTime]).to eq(nil)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="171">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(needs[:data][:need]).to_not have_key(:endTime)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="172">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(needs[:data][:need][:endTime]).to eq(nil)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="173">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(needs[:data][:need]).to_not have_key(:zipCode)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="174">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(needs[:data][:need][:zipCode]).to eq(nil)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="175">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(needs[:data][:need]).to_not have_key(:supportersNeeded)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="176">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(needs[:data][:need][:supportersNeeded]).to eq(nil)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="177">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(needs[:data][:need]).to_not have_key(:status)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="178">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(needs[:data][:need][:status]).to eq(nil)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="179">
-            
-            
-
-            
-
-            <code class="ruby">      end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="180">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="181">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      it &#39;can return only one requested piece of data &#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="182">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        need_2 = Need.create(title: &quot;need 2&quot;, description: &quot;the second test&quot;, point_of_contact: &quot;email@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 4, status: &quot;active&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="183">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        need_1 = Need.create(title: &quot;a need&quot;, description: &quot;a test to see if we can test&quot;, point_of_contact: &quot;email@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 12, status: &quot;active&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="184">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        need_3 = Need.create(title: &quot;need 3&quot;, description: &quot;the theird test&quot;, point_of_contact: &quot;test@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 1, status: &quot;active&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="185">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="186">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        query = &lt;&lt;~GQL</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="187">
-            
-            
-
-            
-
             <code class="ruby">                  { need(id:#{need_1.id})</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="188">
+          <li class="never" data-hits="" data-linenumber="157">
             
             
 
@@ -5384,29 +5043,95 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="189">
+          <li class="never" data-hits="" data-linenumber="158">
             
             
 
             
 
-            <code class="ruby">                      all</code>
+            <code class="ruby">                      title</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="190">
+          <li class="never" data-hits="" data-linenumber="159">
             
             
 
             
 
-            <code class="ruby">                      asdf</code>
+            <code class="ruby">                      description</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="191">
+          <li class="never" data-hits="" data-linenumber="160">
+            
+            
+
+            
+
+            <code class="ruby">                      pointOfContact</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="161">
+            
+            
+
+            
+
+            <code class="ruby">                      startTime</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="162">
+            
+            
+
+            
+
+            <code class="ruby">                      endTime</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="163">
+            
+            
+
+            
+
+            <code class="ruby">                      zipCode</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="164">
+            
+            
+
+            
+
+            <code class="ruby">                      supportersNeeded</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="165">
+            
+            
+
+            
+
+            <code class="ruby">                      status</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="166">
             
             
 
@@ -5417,8 +5142,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="192">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="167">
+            
             
 
             
@@ -5428,7 +5153,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="193">
+          <li class="never" data-hits="" data-linenumber="168">
             
             
 
@@ -5439,8 +5164,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="194">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="169">
+            
             
 
             
@@ -5450,8 +5175,8 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="195">
-            
+          <li class="covered" data-hits="1" data-linenumber="170">
+            <span class="hits">1</span>
             
 
             
@@ -5461,8 +5186,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="196">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="171">
+            
             
 
             
@@ -5472,7 +5197,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="197">
+          <li class="covered" data-hits="1" data-linenumber="172">
             <span class="hits">1</span>
             
 
@@ -5483,8 +5208,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="198">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="173">
+            
             
 
             
@@ -5494,7 +5219,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="199">
+          <li class="covered" data-hits="1" data-linenumber="174">
             <span class="hits">1</span>
             
 
@@ -5505,8 +5230,8 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="200">
-            
+          <li class="covered" data-hits="1" data-linenumber="175">
+            <span class="hits">1</span>
             
 
             
@@ -5516,8 +5241,8 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="201">
-            
+          <li class="covered" data-hits="1" data-linenumber="176">
+            <span class="hits">1</span>
             
 
             
@@ -5527,205 +5252,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="202">
-            
-            
-
-            
-
-            <code class="ruby">binding.pry</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="203">
-            
-            
-
-            
-
-            <code class="ruby">        # expect(needs[:data][:need]).to have_key(:title)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="204">
-            
-            
-
-            
-
-            <code class="ruby">        # expect(needs[:data][:need][:title]).to eq(&quot;a need&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="205">
-            
-            
-
-            
-
-            <code class="ruby">        # expect(needs[:data][:need]).to_not have_key(:description)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="206">
-            
-            
-
-            
-
-            <code class="ruby">        # expect(needs[:data][:need][:description]).to eq(nil)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="207">
-            
-            
-
-            
-
-            <code class="ruby">        # expect(needs[:data][:need]).to_not have_key(:pointOfContact)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="208">
-            
-            
-
-            
-
-            <code class="ruby">        # expect(needs[:data][:need][:pointOfContact]).to eq(nil)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="209">
-            
-            
-
-            
-
-            <code class="ruby">        # expect(needs[:data][:need]).to_not have_key(:startTime)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="210">
-            
-            
-
-            
-
-            <code class="ruby">        # expect(needs[:data][:need][:startTime]).to eq(nil)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="211">
-            
-            
-
-            
-
-            <code class="ruby">        # expect(needs[:data][:need]).to_not have_key(:endTime)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="212">
-            
-            
-
-            
-
-            <code class="ruby">        # expect(needs[:data][:need][:endTime]).to eq(nil)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="213">
-            
-            
-
-            
-
-            <code class="ruby">        # expect(needs[:data][:need]).to_not have_key(:zipCode)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="214">
-            
-            
-
-            
-
-            <code class="ruby">        # expect(needs[:data][:need][:zipCode]).to eq(nil)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="215">
-            
-            
-
-            
-
-            <code class="ruby">        # expect(needs[:data][:need]).to_not have_key(:supportersNeeded)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="216">
-            
-            
-
-            
-
-            <code class="ruby">        # expect(needs[:data][:need][:supportersNeeded]).to eq(nil)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="217">
-            
-            
-
-            
-
-            <code class="ruby">        # expect(needs[:data][:need]).to_not have_key(:status)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="218">
-            
-            
-
-            
-
-            <code class="ruby">        # expect(needs[:data][:need][:status]).to eq(nil)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="219">
-            
-            
-
-            
-
-            <code class="ruby">      end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="220">
+          <li class="never" data-hits="" data-linenumber="177">
             
             
 
@@ -5736,7 +5263,634 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="221">
+          <li class="covered" data-hits="1" data-linenumber="178">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need]).to have_key(:title)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="179">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need][:title]).to eq(&quot;a need&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="180">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need]).to have_key(:description)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="181">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need][:description]).to eq(&quot;a test to see if we can test&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="182">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need]).to have_key(:pointOfContact)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="183">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need][:pointOfContact]).to eq(&quot;email@gmail.com&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="184">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need]).to have_key(:startTime)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="185">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need][:startTime]).to eq(&quot;string value&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="186">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need]).to have_key(:endTime)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="187">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need][:endTime]).to eq(&quot;string value&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="188">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need]).to have_key(:zipCode)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="189">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need][:zipCode]).to eq(&quot;12345&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="190">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need]).to have_key(:supportersNeeded)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="191">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need][:supportersNeeded]).to eq(12)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="192">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need]).to have_key(:status)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="193">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need][:status]).to eq(&quot;active&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="194">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="195">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="196">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      it &#39;can return only one requested piece of data &#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="197">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        need_2 = Need.create(title: &quot;need 2&quot;, description: &quot;the second test&quot;, point_of_contact: &quot;email@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 4, status: &quot;active&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="198">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        need_1 = Need.create(title: &quot;a need&quot;, description: &quot;a test to see if we can test&quot;, point_of_contact: &quot;email@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 12, status: &quot;active&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="199">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        need_3 = Need.create(title: &quot;need 3&quot;, description: &quot;the theird test&quot;, point_of_contact: &quot;test@gmail.com&quot;, start_time: &quot;string value&quot;, end_time: &quot;string value&quot;, zip_code: &quot;12345&quot;, supporters_needed: 1, status: &quot;active&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="200">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="201">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        query = &lt;&lt;~GQL</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="202">
+            
+            
+
+            
+
+            <code class="ruby">                  { need(id:#{need_1.id})</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="203">
+            
+            
+
+            
+
+            <code class="ruby">                    {</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="204">
+            
+            
+
+            
+
+            <code class="ruby">                      title</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="205">
+            
+            
+
+            
+
+            <code class="ruby">                    }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="206">
+            
+            
+
+            
+
+            <code class="ruby">                  }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="207">
+            
+            
+
+            
+
+            <code class="ruby">                  GQL</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="208">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="209">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        post &#39;/graphql&#39;, params: {query: query}</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="210">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="211">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        needs = JSON.parse(response.body, symbolize_names: true)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="212">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="213">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(response).to be_successful</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="214">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(response.status).to eq(200)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="215">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(response.content_type).to eq(&quot;application/json&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="216">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="217">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need]).to have_key(:title)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="218">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need][:title]).to eq(&quot;a need&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="219">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need]).to_not have_key(:description)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="220">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need][:description]).to eq(nil)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="221">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need]).to_not have_key(:pointOfContact)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="222">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need][:pointOfContact]).to eq(nil)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="223">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need]).to_not have_key(:startTime)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="224">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need][:startTime]).to eq(nil)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="225">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need]).to_not have_key(:endTime)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="226">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need][:endTime]).to eq(nil)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="227">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need]).to_not have_key(:zipCode)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="228">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need][:zipCode]).to eq(nil)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="229">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need]).to_not have_key(:supportersNeeded)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="230">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need][:supportersNeeded]).to eq(nil)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="231">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need]).to_not have_key(:status)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="232">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(needs[:data][:need][:status]).to eq(nil)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="233">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="234">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="235">
             
             
 
@@ -5747,7 +5901,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="222">
+          <li class="never" data-hits="" data-linenumber="236">
             
             
 
@@ -5758,7 +5912,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="223">
+          <li class="never" data-hits="" data-linenumber="237">
             
             
 
