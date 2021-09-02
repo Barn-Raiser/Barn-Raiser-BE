@@ -1,6 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Need, type: :model do
+
+  describe 'relationships' do
+    it {should have_many(:need_category)}
+    it {should have_many(:category).through(:need_category)}
+  end
+
   describe 'validations' do
     it {should validate_presence_of(:point_of_contact)}
     it {should validate_presence_of(:title)}
