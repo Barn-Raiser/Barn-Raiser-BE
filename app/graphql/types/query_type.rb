@@ -22,5 +22,12 @@ module Types
       Need.find(id)
     end
 
+
+    field :allCategories, [Types::CategoryType], null: false
+    def allCategories
+      Category.all
+    end
+
+
   end
 end
