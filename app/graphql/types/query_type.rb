@@ -22,7 +22,7 @@ module Types
       Need.find(id)
     end
 
-    # Set up + define field for all categoies query
+    # Set up + define field for all categories query
     field :allCategories, [Types::CategoryType], null: false
     def allCategories
       Category.all
