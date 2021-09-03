@@ -9,11 +9,12 @@ class Mutations::CreateNeed < Mutations::BaseMutation
   argument :state, String, required: false
   argument :zip_code, String, required: true
   argument :supporters_needed, Integer, required: true
+  argument :categories, [ID], required: false
 
   field :need, Types::NeedType, null: true
   field :errors, [String], null: false
 
-  def resolve(title:, point_of_contact:, description:, start_time:, end_time:, street_address: nil, city: nil, state: nil, zip_code:, supporters_needed:)
+  def resolve(title:, point_of_contact:, description:, start_time:, end_time:, street_address: nil, city: nil, state: nil, zip_code:, supporters_needed:, categories:[])
     need = Need.new(
             title: title,
             point_of_contact: point_of_contact,
@@ -29,6 +30,10 @@ class Mutations::CreateNeed < Mutations::BaseMutation
             )
 
     if need.save
+      categories.each do |category_id|
+        NeedCategory.create(need_id: need.id, category_id: category_id)
+      end
+
       {
         need: need,
         errors: []

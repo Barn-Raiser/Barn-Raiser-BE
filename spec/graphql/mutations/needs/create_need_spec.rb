@@ -3,6 +3,10 @@ require 'rails_helper'
 RSpec.describe 'Create a new need', type: :request do
   describe 'happy path' do
     before :each do
+      @cat_1 = Category.create!(tag: "Food")
+      @cat_2 = Category.create!(tag: "Manual Labor")
+      @cat_3 = Category.create!(tag: "Cleanup")
+
       @query =
               <<~GQL
                 mutation {
@@ -17,6 +21,7 @@ RSpec.describe 'Create a new need', type: :request do
                     state: "Colorado"
                     zipCode: "80218"
                     supportersNeeded: 15
+                    categories: [#{@cat_1.id}, #{@cat_3.id}]
                   }
                   )
                   {
@@ -44,6 +49,9 @@ RSpec.describe 'Create a new need', type: :request do
       expect(Need.last.supporters_needed).to eq(15)
       expect(Need.last.title).to eq("Cleanup our park")
       expect(Need.last.street_address).to eq(nil)
+      expect(Need.last.categories.length).to eq(2)
+      expect(Need.last.categories.first.id).to eq(@cat_1.id)
+      expect(Need.last.categories.last.id).to eq(@cat_3.id)
     end
 
     it 'sets status to active in create' do
@@ -55,6 +63,10 @@ RSpec.describe 'Create a new need', type: :request do
 
   describe 'sad path' do
     before :each do
+      @cat_1 = Category.create!(tag: "Food")
+      @cat_2 = Category.create!(tag: "Manual Labor")
+      @cat_3 = Category.create!(tag: "Cleanup")
+
       @incomplete_query =
               <<~GQL
                 mutation {
@@ -67,6 +79,7 @@ RSpec.describe 'Create a new need', type: :request do
                     state: "Colorado"
                     zipCode: "80218"
                     supportersNeeded: 15
+                    categories: [#{@cat_1.id}, #{@cat_3.id}]
                   }
                   )
                   {
