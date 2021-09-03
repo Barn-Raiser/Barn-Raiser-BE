@@ -23,5 +23,11 @@ module Types
       Need.find(id)
     end
 
+    # Set up + define field for retrieving all categories
+    field :allCategories, [Types::CategoryType], null: false
+    def allCategories
+      Category.all
+    end
+
   end
 end
