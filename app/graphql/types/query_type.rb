@@ -2,7 +2,6 @@ module Types
   class QueryType < Types::BaseObject
     # Set up + define field for all active needs query
     field :allActiveNeeds, [Types::NeedType], null: false
-
     def allActiveNeeds
       Need.where(status: 'active')
     end
@@ -22,6 +21,13 @@ module Types
     def need(id:)
       Need.find(id)
     end
+
+    # Set up + define field for all categories query
+    field :allCategories, [Types::CategoryType], null: false
+    def allCategories
+      Category.all
+    end
+
 
   end
 end
