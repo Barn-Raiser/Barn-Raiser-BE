@@ -8,6 +8,15 @@ RSpec.describe 'get info on need', type: :request do
         need_2 = Need.create(title: "need 2", description: "the second test", point_of_contact: "email@gmail.com", start_time: "string value", end_time: "string value", zip_code: "12345", supporters_needed: 4, status: "active")
         need_3 = Need.create(title: "need 3", description: "the theird test", point_of_contact: "test@gmail.com", start_time: "string value", end_time: "string value", zip_code: "12345", supporters_needed: 1, status: "active")
 
+        cat_1 = Category.create!(tag: "Food")
+        cat_2 = Category.create!(tag: "Manual Labor")
+        cat_3 = Category.create!(tag: "Cleanup")
+
+        NeedCategory.create!(need_id: need_1.id, category_id: cat_1.id)
+        NeedCategory.create!(need_id: need_1.id, category_id: cat_2.id)
+        NeedCategory.create!(need_id: need_2.id, category_id: cat_2.id)
+        NeedCategory.create!(need_id: need_3.id, category_id: cat_3.id)
+
         query = <<~GQL
                 { allNeeds
                   {
@@ -19,6 +28,10 @@ RSpec.describe 'get info on need', type: :request do
                     zipCode
                     supportersNeeded
                     status
+                    categories {
+                      id
+                      tag
+                    }
                   }
                 }
                 GQL
@@ -42,6 +55,8 @@ RSpec.describe 'get info on need', type: :request do
         expect(needs[:data][:allNeeds].first[:zipCode]).to eq("12345")
         expect(needs[:data][:allNeeds].first[:supportersNeeded]).to eq(12)
         expect(needs[:data][:allNeeds].first[:status]).to eq("active")
+        expect(needs[:data][:allNeeds].first[:categories].first[:tag]).to eq(cat_1.tag)
+        expect(needs[:data][:allNeeds].first[:categories].last[:tag]).to eq(cat_2.tag)
 
         expect(needs[:data][:allNeeds].last[:title]).to eq("need 3")
         expect(needs[:data][:allNeeds].last[:description]).to eq("the theird test")
@@ -51,6 +66,7 @@ RSpec.describe 'get info on need', type: :request do
         expect(needs[:data][:allNeeds].last[:zipCode]).to eq("12345")
         expect(needs[:data][:allNeeds].last[:supportersNeeded]).to eq(1)
         expect(needs[:data][:allNeeds].last[:status]).to eq("active")
+        expect(needs[:data][:allNeeds].last[:categories].first[:tag]).to eq(cat_3.tag)
       end
 
       it 'can return limited information if requested' do
@@ -58,6 +74,14 @@ RSpec.describe 'get info on need', type: :request do
         need_2 = Need.create(title: "need 2", description: "the second test", point_of_contact: "email@gmail.com", start_time: "string value", end_time: "string value", zip_code: "12345", supporters_needed: 4, status: "active")
         need_3 = Need.create(title: "need 3", description: "the theird test", point_of_contact: "test@gmail.com", start_time: "string value", end_time: "string value", zip_code: "12345", supporters_needed: 1, status: "active")
 
+        cat_1 = Category.create!(tag: "Food")
+        cat_2 = Category.create!(tag: "Manual Labor")
+        cat_3 = Category.create!(tag: "Cleanup")
+
+        NeedCategory.create!(need_id: need_1.id, category_id: cat_1.id)
+        NeedCategory.create!(need_id: need_1.id, category_id: cat_2.id)
+        NeedCategory.create!(need_id: need_2.id, category_id: cat_2.id)
+        NeedCategory.create!(need_id: need_3.id, category_id: cat_3.id)
         query = <<~GQL
                 { allNeeds
                   {
@@ -152,6 +176,15 @@ RSpec.describe 'get info on need', type: :request do
         need_1 = Need.create(title: "a need", description: "a test to see if we can test", point_of_contact: "email@gmail.com", start_time: "string value", end_time: "string value", zip_code: "12345", supporters_needed: 12, status: "active")
         need_3 = Need.create(title: "need 3", description: "the theird test", point_of_contact: "test@gmail.com", start_time: "string value", end_time: "string value", zip_code: "12345", supporters_needed: 1, status: "active")
 
+        cat_1 = Category.create!(tag: "Food")
+        cat_2 = Category.create!(tag: "Manual Labor")
+        cat_3 = Category.create!(tag: "Cleanup")
+
+        NeedCategory.create!(need_id: need_1.id, category_id: cat_1.id)
+        NeedCategory.create!(need_id: need_1.id, category_id: cat_2.id)
+        NeedCategory.create!(need_id: need_2.id, category_id: cat_2.id)
+        NeedCategory.create!(need_id: need_3.id, category_id: cat_3.id)
+
         query = <<~GQL
                   { need(id:#{need_1.id})
                     {
@@ -163,6 +196,10 @@ RSpec.describe 'get info on need', type: :request do
                       zipCode
                       supportersNeeded
                       status
+                      categories {
+                        id
+                        tag
+                      }
                     }
                   }
                   GQL
@@ -191,6 +228,9 @@ RSpec.describe 'get info on need', type: :request do
         expect(needs[:data][:need][:supportersNeeded]).to eq(12)
         expect(needs[:data][:need]).to have_key(:status)
         expect(needs[:data][:need][:status]).to eq("active")
+        expect(needs[:data][:need][:categories].length).to eq(2)
+        expect(needs[:data][:need][:categories].first[:tag]).to eq(cat_1.tag)
+        expect(needs[:data][:need][:categories].last[:tag]).to eq(cat_2.tag)
       end
 
       it 'can return only one requested piece of data ' do
