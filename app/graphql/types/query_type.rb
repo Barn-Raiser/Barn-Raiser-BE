@@ -33,7 +33,5 @@ module Types
     def allCategories
       Category.all
     end
-
-
   end
 end
