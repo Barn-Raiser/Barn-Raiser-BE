@@ -5,7 +5,7 @@ version: 2.1 # Use 2.1 to enable using orbs and other features.
 orbs:
   ruby: circleci/ruby@1.0
   # heroku: circleci/heroku@1.2.6
-  heroku: circleci/heroku@0.0.10
+  # heroku: circleci/heroku@0.0.10
 
 jobs:
   build: # our first job, named "build"
@@ -64,14 +64,15 @@ workflows:
             - build   # Finally, run the build job.
 
 
-  heroku_deploy:
-    jobs:
-      - heroku/deploy-via-git # Use the pre-configured job, deploy-via-git
-
-      # - build
-      # - heroku/deploy-via-git: # Use the pre-configured job, deploy-via-git
-          # requires:
-          #   - build
-          # filters:
-            # branches:
-              # only: sequential-branch-filter
+  # THIS CAUSES TROUBLE!!
+  # heroku_deploy:
+  #   jobs:
+  #     - heroku/deploy-via-git # Use the pre-configured job, deploy-via-git
+  #
+  #     # - build
+  #     # - heroku/deploy-via-git: # Use the pre-configured job, deploy-via-git
+  #         # requires:
+  #         #   - build
+  #         # filters:
+  #           # branches:
+  #             # only: sequential-branch-filter
