@@ -10,4 +10,9 @@ class Need < ApplicationRecord
   before_create do
     self[:status] = 1
   end
+
+  def self.upcoming_active
+    where('status = ? AND end_time >= ?', 1, Time.now)
+  end
+
 end
