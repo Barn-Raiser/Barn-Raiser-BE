@@ -138,6 +138,10 @@ RSpec.describe 'get info on need', type: :request do
         NeedCategory.create!(need_id: need_2.id, category_id: cat_2.id)
         NeedCategory.create!(need_id: need_3.id, category_id: cat_3.id)
 
+        allow(Time).to receive(:now) do
+          DateTime.new(2021,9,5,12)
+        end
+
         query = <<~GQL
                 { upcomingActiveNeeds
                   {
