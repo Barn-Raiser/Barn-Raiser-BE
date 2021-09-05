@@ -1,6 +1,7 @@
 class Need < ApplicationRecord
   enum status: {pending: 0, active: 1, expired: 2, rejected: 3}
 
+  has_many :supporters
   has_many :need_category
   has_many :categories, through: :need_category
 

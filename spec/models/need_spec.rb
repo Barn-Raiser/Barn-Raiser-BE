@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe Need, type: :model do
 
   describe 'relationships' do
+    it {should have_many(:supporters)}
     it {should have_many(:need_category)}
     it {should have_many(:categories).through(:need_category)}
   end
