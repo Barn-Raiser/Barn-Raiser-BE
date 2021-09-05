@@ -123,6 +123,74 @@ RSpec.describe 'get info on need', type: :request do
 
     end
 
+    describe 'upcomingActiveNeeds' do
+      it 'can return all fields for needs whose end date has not yet passed' do
+        need_1 = Need.create(title: "a need", description: "a test to see if we can test", point_of_contact: "test1@gmail.com", start_time: "2021-11-24 12:00", end_time: "2021-11-24 14:00", zip_code: "12345", supporters_needed: 12, status: "active")
+        need_2 = Need.create(title: "need 2", description: "the second test", point_of_contact: "test2@gmail.com", start_time: "2021-08-24 12:00", end_time: "2021-08-24 19:00", zip_code: "12345", supporters_needed: 4, status: "active")
+        need_3 = Need.create(title: "need 3", description: "the third test", point_of_contact: "test3@gmail.com", start_time: "2021-08-24 12:00", end_time: "2021-09-24 12:00", zip_code: "12345", supporters_needed: 1, status: "active")
+
+        cat_1 = Category.create!(tag: "Food")
+        cat_2 = Category.create!(tag: "Manual Labor")
+        cat_3 = Category.create!(tag: "Cleanup")
+
+        NeedCategory.create!(need_id: need_1.id, category_id: cat_1.id)
+        NeedCategory.create!(need_id: need_1.id, category_id: cat_2.id)
+        NeedCategory.create!(need_id: need_2.id, category_id: cat_2.id)
+        NeedCategory.create!(need_id: need_3.id, category_id: cat_3.id)
+
+        query = <<~GQL
+                { upcomingActiveNeeds
+                  {
+                    title
+                    description
+                    pointOfContact
+                    startTime
+                    endTime
+                    zipCode
+                    supportersNeeded
+                    status
+                    categories {
+                      id
+                      tag
+                    }
+                  }
+                }
+                GQL
+
+        post '/graphql', params: {query: query}
+
+        needs = JSON.parse(response.body, symbolize_names: true)
+
+        expect(response).to be_successful
+        expect(response.status).to eq(200)
+        expect(response.content_type).to eq("application/json")
+
+        expect(needs[:data][:upcomingActiveNeeds]).to be_a(Array)
+        expect(needs[:data][:upcomingActiveNeeds].count).to eq(2)
+
+        expect(needs[:data][:upcomingActiveNeeds].first[:title]).to eq("a need")
+        expect(needs[:data][:upcomingActiveNeeds].first[:description]).to eq("a test to see if we can test")
+        expect(needs[:data][:upcomingActiveNeeds].first[:pointOfContact]).to eq("test1@gmail.com")
+        expect(needs[:data][:upcomingActiveNeeds].first[:startTime]).to eq("2021-11-24 12:00")
+        expect(needs[:data][:upcomingActiveNeeds].first[:endTime]).to eq("2021-11-24 14:00")
+        expect(needs[:data][:upcomingActiveNeeds].first[:zipCode]).to eq("12345")
+        expect(needs[:data][:upcomingActiveNeeds].first[:supportersNeeded]).to eq(12)
+        expect(needs[:data][:upcomingActiveNeeds].first[:status]).to eq("active")
+        expect(needs[:data][:upcomingActiveNeeds].first[:categories].first[:tag]).to eq(cat_1.tag)
+        expect(needs[:data][:upcomingActiveNeeds].first[:categories].last[:tag]).to eq(cat_2.tag)
+
+        expect(needs[:data][:upcomingActiveNeeds].last[:title]).to eq("need 3")
+        expect(needs[:data][:upcomingActiveNeeds].last[:description]).to eq("the third test")
+        expect(needs[:data][:upcomingActiveNeeds].last[:pointOfContact]).to eq("test3@gmail.com")
+        expect(needs[:data][:upcomingActiveNeeds].last[:startTime]).to eq("2021-08-24 12:00")
+        expect(needs[:data][:upcomingActiveNeeds].last[:endTime]).to eq("2021-09-24 12:00")
+        expect(needs[:data][:upcomingActiveNeeds].last[:zipCode]).to eq("12345")
+        expect(needs[:data][:upcomingActiveNeeds].last[:supportersNeeded]).to eq(1)
+        expect(needs[:data][:upcomingActiveNeeds].last[:status]).to eq("active")
+        expect(needs[:data][:upcomingActiveNeeds].last[:categories].first[:tag]).to eq(cat_3.tag)
+      end
+    end
+
     # describe 'allActiveNeeds' do
     #   it 'can return all information' do
     #     need_1 = Need.create(title: "need_1", description: "first", point_of_contact: "email@gmail.com", start_time: "string value", end_time: "string value", zip_code: "12345", supporters_needed: 12, status: "active")
