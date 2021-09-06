@@ -60,10 +60,10 @@ RSpec.describe 'get all categories', type: :request do
 
 
         query = <<~GQL
-                { suportersByCategory
+                { allCategories
                   {
                     tag
-                    suporters {
+                    supporters {
                       name
                       email
                     }
@@ -79,10 +79,36 @@ RSpec.describe 'get all categories', type: :request do
         expect(response.status).to eq(200)
         expect(response.content_type).to eq("application/json")
 
-        expect(suporters).to eq(nil)
-        # expect(suporters[:data][:suportersByCategory]).to be_a(Array)
-        # expect(suporters[:data][:suportersByCategory].count).to eq(3)
-        #
+        # expect(suporters).to eq(nil)
+        expect(suporters[:data][:allCategories]).to be_a(Array)
+        expect(suporters[:data][:allCategories].count).to eq(3)
+
+        expect(suporters[:data][:allCategories][0]).to have_key(:tag)
+        expect(suporters[:data][:allCategories][0][:tag]).to eq("Food")
+        expect(suporters[:data][:allCategories][0]).to have_key(:supporters)
+        expect(suporters[:data][:allCategories][0][:supporters].class).to eq(Array)
+        expect(suporters[:data][:allCategories][0][:supporters][0][:email]).to eq("testing@test.com")
+        expect(suporters[:data][:allCategories][0][:supporters][0][:name]).to eq("albert")
+        expect(suporters[:data][:allCategories][0][:supporters][1][:email]).to eq("rando@test.com")
+        expect(suporters[:data][:allCategories][0][:supporters][1][:name]).to eq("bob")
+
+        expect(suporters[:data][:allCategories][1]).to have_key(:tag)
+        expect(suporters[:data][:allCategories][1][:tag]).to eq("Manual Labor")
+        expect(suporters[:data][:allCategories][1]).to have_key(:supporters)
+        expect(suporters[:data][:allCategories][1][:supporters].class).to eq(Array)
+        expect(suporters[:data][:allCategories][1][:supporters][0][:email]).to eq("testing@test.com")
+        expect(suporters[:data][:allCategories][1][:supporters][0][:name]).to eq("albert")
+        expect(suporters[:data][:allCategories][1][:supporters][1][:email]).to eq("rando@test.com")
+        expect(suporters[:data][:allCategories][1][:supporters][1][:name]).to eq("bob")
+
+        expect(suporters[:data][:allCategories][2]).to have_key(:tag)
+        expect(suporters[:data][:allCategories][2][:tag]).to eq("Cleanup")
+        expect(suporters[:data][:allCategories][2]).to have_key(:supporters)
+        expect(suporters[:data][:allCategories][2][:supporters].class).to eq(Array)
+        expect(suporters[:data][:allCategories][2][:supporters][1][:email]).to eq("kitty@test.com")
+        expect(suporters[:data][:allCategories][2][:supporters][1][:name]).to eq("cat")
+        expect(suporters[:data][:allCategories][2][:supporters][0][:email]).to eq("rando@test.com")
+        expect(suporters[:data][:allCategories][2][:supporters][0][:name]).to eq("bob")
 
       end
     end
