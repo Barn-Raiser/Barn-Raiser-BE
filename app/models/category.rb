@@ -4,4 +4,6 @@ class Category < ApplicationRecord
   has_many :need_category
   has_many :need, through: :need_category
 
+  has_many :supporters, through: :need
+
 end
