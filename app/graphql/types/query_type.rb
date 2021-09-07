@@ -3,13 +3,13 @@ module Types
     # Set up + define field for all active needs query
     field :allActiveNeeds, [Types::NeedType], null: false
     def allActiveNeeds
-      Need.where(status: 'active')
+      Need.all_active
     end
 
     # Set up + define field for *upcoming* active needs query
     field :upcomingActiveNeeds, [Types::NeedType], null: false
     def upcomingActiveNeeds
-      Need.where('status = ? AND end_time >= ?', 1, Time.now)
+      Need.upcoming_active
     end
 
     # Set up + define field for all  needs query

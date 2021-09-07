@@ -6,5 +6,4 @@ RSpec.describe NeedCategory, type: :model do
     it { should belong_to(:category) }
     it { should belong_to(:need) }
   end
-
 end
