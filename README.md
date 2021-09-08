@@ -13,16 +13,16 @@ Heroku: [BarnRaiser BE](https://barn-raiser-be.herokuapp.com/)
 Contributors:
 - Aliya Merali  
    [Github](https://github.com/aliyamerali) | [LinkedIn](https://www.linkedin.com/in/aliyamerali/)
-- Andrew Shafer
+- Andrew Shafer  
    [Github](https://github.com/Aphilosopher30) | [LinkedIn](https://www.linkedin.com/in/andrew-shafer-0631ab20a/)
 
 #### Frontend
 Heroku: [BarnRaiser](https://barn-raiser.herokuapp.com/)   
 GitHub: [barn-raiser-ui](https://github.com/Barn-Raiser/barn-raiser-ui/)
 Contributors:
-- Dean Cook
+- Dean Cook  
    [Github](https://github.com/novaraptur) | [LinkedIn](https://www.linkedin.com/in/dean-r-cook/)
-- Shauna Myers
+- Shauna Myers  
    [Github](https://github.com/ShaunaMyers) | [LinkedIn](https://www.linkedin.com/in/shauna-myers/)
 
 ### Schema
