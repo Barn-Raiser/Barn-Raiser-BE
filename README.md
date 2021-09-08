@@ -18,14 +18,14 @@ Contributors:
 
 #### Frontend
 Heroku: [BarnRaiser](https://barn-raiser.herokuapp.com/)   
-GitHub: [barn-raiser-ui](https://github.com/Barn-Raiser/barn-raiser-ui/)
+GitHub: [barn-raiser-ui](https://github.com/Barn-Raiser/barn-raiser-ui/)    
 Contributors:
 - Dean Cook  
    [Github](https://github.com/novaraptur) | [LinkedIn](https://www.linkedin.com/in/dean-r-cook/)
 - Shauna Myers  
    [Github](https://github.com/ShaunaMyers) | [LinkedIn](https://www.linkedin.com/in/shauna-myers/)
 
-### Schema
+### Database Schema
 ![Screen Shot 2021-09-05 at 11 05 07 AM](https://user-images.githubusercontent.com/5446926/132135254-3b35a83d-fd4b-4b63-9d0e-27b3a77929d9.png)
 
 ### Available Queries/Mutations
